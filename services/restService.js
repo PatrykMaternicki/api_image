@@ -12,13 +12,26 @@ module.exports = {
   isAllowedParam: (query, allowedParams) => {
     let isAllowed = true
     for (let prop in query) {
-      console.log(prop)
-      console.log(allowedParams)
       if(!prop.includes(allowedParams)) {
         isAllowed = false
         break
       }
     }
     return isAllowed
+  },
+
+  isRequiredParam: (query, requiredParam) => {
+    let valid = true
+    if(Object.keys(query).length === 0 && requiredParam.length > 0) {
+      return false
+    }
+
+    for (let i = 0; i < requiredParam.length; i++) {
+      if(!query[requiredParam[i]]) {
+        valid = false
+        break
+      }
+    }
+    return valid
   }
 }

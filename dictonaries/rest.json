@@ -4,7 +4,16 @@
       "route": "/",
       "allowedParam": [
         "search"
-      ]
+      ],
+      "requiredParam": [
+        "search"
+      ],
+      "validMethod": {
+        "search": [
+          "required",
+          "isEmpty"
+        ]
+      }
     }
   }
 }
