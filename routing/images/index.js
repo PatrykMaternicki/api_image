@@ -1,4 +1,5 @@
 module.exports = (app) => {
   const route = app.get('dictionaryProvider').routeNameResolve('image')
-  require('./get')(app, route)
+  const restService = app.get('restService')
+  require('./get')(app, route, restService)
 }

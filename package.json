@@ -18,6 +18,7 @@
   "homepage": "https://github.com/PatrykMaternicki/api_image#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-rest": "^1.0.4"
+    "express-rest": "^1.0.4",
+    "node-fetch": "^2.6.1"
   }
 }
