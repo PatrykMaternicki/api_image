@@ -1,5 +1,9 @@
-module.exports = (app, nameRoute, restService) => {
-  app.get(nameRoute, async (req, res) => {
+module.exports = (app, config, restService) => {
+  app.get(config.route, async (req, res) => {
+    if (!restService.isAllowedParam(req.query, config.allowedParam)) {
+      restService.createErrorHandler('NOT_ALLOWED_PARAMS', res)
+      return
+    }
     const pixabayRequest = await app.get('pixabayService').get()
     const giphyRequest = await app.get('giphyService').get()
     const giphyStatus = giphyRequest.status

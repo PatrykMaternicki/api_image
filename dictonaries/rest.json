@@ -1,7 +1,10 @@
 {
   "api": {
     "image": {
-      "route": "/"
+      "route": "/",
+      "allowedParam": [
+        "search"
+      ]
     }
   }
 }
