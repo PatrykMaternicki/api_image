@@ -1,0 +1,23 @@
+{
+  "name": "api_image",
+  "version": "1.0.0",
+  "description": "api_image",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PatrykMaternicki/api_image.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PatrykMaternicki/api_image/issues"
+  },
+  "homepage": "https://github.com/PatrykMaternicki/api_image#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-rest": "^1.0.4"
+  }
+}
