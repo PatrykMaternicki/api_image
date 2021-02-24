@@ -20,6 +20,7 @@ module.exports = (app, config, restService) => {
     
     const pixabayRequest = await app.get('pixabayService').get(req.query.search)
     const giphyRequest = await app.get('giphyService').get(req.query.search)
+    
     const giphyStatus = giphyRequest.status
     const pixabayStatus = pixabayRequest.status
     const status = giphyStatus || pixabayStatus === true ? true : false

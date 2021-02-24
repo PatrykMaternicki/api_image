@@ -4,7 +4,8 @@
   "description": "api_image",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon index.js"
+    "server": "nodemon index.js",
+    "cypress": "cypress run"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/PatrykMaternicki/api_image#readme",
   "dependencies": {
+    "cors": "^2.8.5",
+    "cypress": "^6.5.0",
     "express": "^4.17.1",
     "express-rest": "^1.0.4",
     "node-fetch": "^2.6.1"
