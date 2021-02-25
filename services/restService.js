@@ -20,6 +20,7 @@ module.exports = {
 
   isRequiredParam: (query, requiredParam) => {
     let valid = true
+    
     if(Object.keys(query).length === 0 && requiredParam.length > 0) {
       return false
     }
