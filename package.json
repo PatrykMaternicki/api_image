@@ -6,7 +6,8 @@
   "scripts": {
     "server": "nodemon index.js",
     "cypress": "cypress run",
-    "lint": "eslint **/*.js --fix  --ignore-pattern cypress/"
+    "lint": "eslint **/*.js --fix  --ignore-pattern cypress/",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,6 @@
   },
   "type": "commonjs",
   "engines": {
-      "node": ">=8.10.0"
+    "node": ">=8.10.0"
   }
 }
