@@ -1,7 +1,7 @@
 context('Test Case: get images by', () => {
   it('When request, doesnt have param, should be return 400', () => {
     cy.request({
-      url: 'http://localhost:8080/',
+      url: 'http://localhost:8080/images',
       failOnStatusCode: false
     })
       .should((response) => {
@@ -11,7 +11,7 @@ context('Test Case: get images by', () => {
 
   it('When request, doesnt have param, should be return PARAM_REQUIRED', () => {
     cy.request({
-      url: 'http://localhost:8080/',
+      url: 'http://localhost:8080/images',
       failOnStatusCode: false
     })
       .should((response) => {
@@ -21,7 +21,7 @@ context('Test Case: get images by', () => {
 
   it('When param is empty, should be return 400', () => {
     cy.request({
-      url: 'http://localhost:8080/?search',
+      url: 'http://localhost:8080/images?search',
       failOnStatusCode: false
     })
       .should((response) => {
@@ -32,7 +32,7 @@ context('Test Case: get images by', () => {
     
   it('When param is empty, should be return info NOT_ALLOWED_PARAMS', () => {
     cy.request({
-      url: 'http://localhost:8080/?search=aasa&test=2',
+      url: 'http://localhost:8080/images?search=aasa&test=2',
       failOnStatusCode: false
     })
     .should((response) => {
@@ -42,7 +42,7 @@ context('Test Case: get images by', () => {
 
   it('When everything is ok, should be return 200', () => {
     cy.request({
-      url: 'http://localhost:8080/?search=test',
+      url: 'http://localhost:8080/images?search=test',
       failOnStatusCode: false
     })
     .should((response) => {

@@ -7,6 +7,7 @@ module.exports = {
     "ecmaVersion": 2020
   },
   "rules": {
+    "no-console": "error",
     "indent": ["error", 2],
     "node/exports-style": ["error", "module.exports"],
     "node/file-extension-in-import": ["error", "always"],
