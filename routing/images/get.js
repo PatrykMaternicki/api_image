@@ -1,5 +1,3 @@
-const requestValidator = require("../../helpers/requestValidator");
-
 module.exports = (app, config, restService) => {
   app.get(config.route, async (req, res) => {
 
